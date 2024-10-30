@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="center">
+        <form (ngSubmit)="addRes(destForm)" #destForm="ngForm">
+            <div>
+                <label>Naziv</label>
+                <input class="form-control" type="text" name="name" #name="ngModel" required [(ngModel)]="res.name" />
+            </div>
+            <div class="err" *ngIf="name.invalid && name.dirty">
+                Morate uneti naziv.
+            </div>
+            <div>
+                <label>Adresa</label>
+                <input class="form-control" type="text" name="name" #name="ngModel" required
+                    [(ngModel)]="res.address" />
+            </div>
+            <div class="err" *ngIf="name.invalid && name.dirty">
+                Morate uneti adresu.
+            </div>
+            <div>
+                <label>Slika URL</label>
+                <input class="form-control" type="text" name="photo" #photo="ngModel" required
+                    [(ngModel)]="res.photo" />
+            </div>
+            <div class="err" *ngIf="photo.invalid && photo.dirty">
+                <div *ngIf="photo.errors">
+                    Slika restorana je obavezna i mora se poklapati sa paternom.
+                </div>
+            </div>
+            <div>
+                <button style="margin-top: 2%;" type="submit" class="btn btn-primary">Dodaj</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>

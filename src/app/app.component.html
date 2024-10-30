@@ -1,0 +1,38 @@
+
+<nav class="nav-container">
+    <div class="links">
+        <span><a class="nav-link" routerLink="/restaurants" routerLinkActive="active">Restorani</a></span>
+        <span *ngIf="!isLogIn"><a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a></span>
+        <span *ngIf="!isLogIn"><a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a></span>
+        <span *ngIf="admin"><a class="nav-link" routerLink="/add-meal" routerLinkActive="active">Dodajte Jelo</a></span>
+        <span *ngIf="admin"><a class="nav-link" routerLink="/show-users" routerLinkActive="active">Prikaz korisnika</a></span>
+        <span><a class="nav-link" routerLink="/o-nama" routerLinkActive="active">O nama</a></span>
+    </div>
+    <div class="logout-button-container">
+        <button *ngIf="isLogIn" (click)="removeToken()" class="btn btn-outline-primary">Log Out</button>
+    </div>
+</nav>
+
+<!-- <nav class="nav-container">
+    <div style="text-align: center;" class="links">
+            <span style="margin: 2%;"><a class="link-primary" routerLink="/restaurants"
+                            routerLinkActive="active">Restorani</a></span>
+            <span style="margin: 2%;" *ngIf="!isLogIn"><a class="link-primary" routerLink="/login"
+                            routerLinkActive="active">Login</a></span>
+            <span style="margin: 2%;" *ngIf="!isLogIn"><a class="link-primary" routerLink="/register"
+                            routerLinkActive="active">Register</a></span>
+            <span *ngIf="admin" style="margin: 2%;"><a class="link-primary" routerLink="/add-meal"
+                            routerLinkActive="active">Dodajte Jelo</a></span>
+            <span *ngIf="admin" style="margin: 2%;"><a class="link-primary" routerLink="/show-users"
+                            routerLinkActive="active">Prikaz korisnika</a></span>
+            <span style="margin: 2%;"><a class="link-primary" routerLink="/o-nama"
+                            routerLinkActive="active" >O nama</a></span>
+             
+    </div>
+    <span style="margin-right: 160px; margin-bottom: 80px"><button *ngIf="isLogIn" (click)="removeToken()" style="margin-left: 85%; margin-top: 0px;"
+        class="btn btn-outline-primary">Log Out</button></span>
+</nav> -->
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

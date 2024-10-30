@@ -1,0 +1,21 @@
+<div class="rest-container" style="margin-top: 10%;">
+    <div><a href="/meals?restaurantName={{res.name}}?"><img src="{{res.photo}}" width="250px" height="250px"></a></div>
+    <div style="background-color: white; width: 250px; height: auto; margin-left: 11%;">
+        <div>
+            <h3>{{res.name}}</h3>
+        </div>
+        <div>{{res.address}}</div>
+        <br>
+        <div>
+            <span style="margin: 2%;"><a href="/update-restaurant?name={{res.name}}"><button class="btn btn-primary"
+                        *ngIf="adminLogin">Azuriraj</button></a></span>
+            <span style="margin: 2%;"><button (click)="deleteRes(res.name)" class="btn btn-danger"
+                    *ngIf="adminLogin"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                    </svg> Ukloni</button></span>
+        </div>
+    </div>
+
+</div>

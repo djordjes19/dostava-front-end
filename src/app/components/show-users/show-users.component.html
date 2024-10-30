@@ -1,0 +1,26 @@
+<div class="container">
+
+    <table class="table table-dark">
+        <thead style="text-align: center;">
+            <tr>
+                <td><b>Ime</b></td>
+                <td><b>Prezime</b></td>
+                <td><b>Username</b></td>
+                <td><b>Adersa</b></td>
+                <td><b>Vrsta</b></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody style="text-align: center;">
+            <tr *ngFor="let u of users$ | async">
+                <td>{{u.ime}}</td>
+                <td>{{u.prezime}}</td>
+                <td>{{u.username}}</td>
+                <td>{{u.adresa}}</td>
+                <td>{{u.userType.name}}</td>
+                <td><button (click)="deleteUser(u)" class="btn btn-danger">Ukloni</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

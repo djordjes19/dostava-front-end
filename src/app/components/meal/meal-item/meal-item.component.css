@@ -1,0 +1,13 @@
+.meal-container
+{
+    
+    width: 330px;
+    height: 430px;
+    border-radius:5px;
+    display:inline-block;
+    padding:5px;
+    text-align: center;
+    margin: 3%;
+    background-color: rgb(177, 197, 217);
+    
+}

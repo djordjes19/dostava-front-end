@@ -1,0 +1,23 @@
+<div class="meal-container" style="margin-top: 10%;">
+    <div><img [src]="meal.slika" width="250px" height="250px"></div>
+    <br>
+    <div style=" width: 250px; height: auto; margin-left: 11%;">
+        <div>
+            <h3>{{meal.name}}</h3>
+        </div>
+        <div>Cena jela: {{meal.price}}din</div>
+    </div>
+    
+    <div>
+        <span><a href="/update-meal?name={{meal.name}}"><button class="btn btn-primary"
+                    *ngIf="adminLogin">Azuriraj</button></a></span>
+        <span><a href="/order-meal?name={{meal.name}}"><button class="btn btn-primary"
+                    *ngIf="isLogIn">Naruci</button></a></span>
+        <span style="margin: 2%;"><button (click)="deleteMeal()" class="btn btn-danger" *ngIf="adminLogin"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-trash-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                </svg> Ukloni</button></span>
+    </div>
+</div>

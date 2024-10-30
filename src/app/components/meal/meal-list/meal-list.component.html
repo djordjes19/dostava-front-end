@@ -1,0 +1,6 @@
+<div class="row justify-content-md-center">
+    <button type="button" *ngIf="adminLogin" routerLink="/add-meal" class="btn btn-primary btn-lg btn-block">Dodaj jelo</button>
+</div>
+<div class="container" style="border: 2pt;">
+    <app-meal-item [meal]="meal" *ngFor="let meal of meals$ | async"></app-meal-item>
+</div>

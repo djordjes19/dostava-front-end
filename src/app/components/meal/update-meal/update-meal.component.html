@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="center">
+        <form (ngSubmit)="updateMeal()">            
+            <div>
+                <label>Cena</label>
+                <input class="form-control" type="number" name="price" [(ngModel)]="price"/>
+            </div>
+            <div>
+                <label>Slika URL</label>
+                 <input class="form-control" type="text" name="photo"  required
+                   [(ngModel)]="photo"/>
+            </div>
+            <div>
+                <button style="margin-top: 2%;" type="submit" class="btn btn-primary">Azuriraj</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>

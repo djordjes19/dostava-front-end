@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="center">
+        <form (ngSubmit)="updateRes()">            
+            <div>
+                <label>Adresa</label>
+                <input class="form-control" type="text" name="address" [(ngModel)]="address"/>
+            </div>
+            <div>
+                <label>Slika URL</label>
+                 <input class="form-control" type="text" name="photo"  required [(ngModel)]="photo"/>
+            </div>
+            <div>
+                <button style="margin-top: 2%;" type="submit" class="btn btn-primary">Azuriraj</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>

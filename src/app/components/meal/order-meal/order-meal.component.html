@@ -1,0 +1,31 @@
+<h1 class="display-1"><b>{{name}}</b></h1>
+<div class="row">
+    <div class="col-6">
+        <div class="bg-success p-2 text-dark bg-opacity-25">
+            <br>
+            <label>
+                <p class="fs-3">Cena:&nbsp;&nbsp;</p>
+            </label>
+            <label><p class="fs-3">{{meal.price}}din</p>
+            </label>
+        </div>
+        <div class="bg-success p-2 text-dark bg-opacity-25">
+            <br>
+            <label>
+                <p class="fs-3">Kalorijska vrednost:&nbsp;&nbsp;</p>
+            </label>
+            <label>
+                <p class="fs-4">{{meal.kcal}}kcal</p>
+            </label>
+        </div>
+        <br><br>
+        <div class="row justify-content-md-center">
+            <div class="col-3">
+            <button style="margin-top: 2%;" type="submit" class="btn btn-primary" (click)="orderMeal()">Naruci</button>
+        </div></div>
+    </div>
+    <div class="col-6">
+        <img src="{{meal.slika}}" class="img-fluid">
+    </div>
+    
+</div>

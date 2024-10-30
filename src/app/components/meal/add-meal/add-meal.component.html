@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="text-center">
+        <form (ngSubmit)="addMeal(mealForm)" #mealForm="ngForm">
+            <div class="row justify-content-md-center">
+                <div class="col-4">
+                    <label>Naziv jela</label>
+                    <input class="form-control" type="text" name="name" #name="ngModel" required
+                        [(ngModel)]="meal.name" />
+                </div>
+            </div>
+            <div class="err" *ngIf="name.invalid && name.dirty">
+                Morate uneti naziv.
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-4">
+                    <label>Cena po obroku</label>
+                    <input class="form-control" type="number" name="price" #price="ngModel" required
+                        [(ngModel)]="meal.price" />
+                </div>
+            </div>
+            <div class="err" *ngIf="price.invalid && price.dirty">
+                Morate uneti cenu.
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-4">
+                    <label>Kalorijska vrednost</label>
+                    <input class="form-control" type="number" name="kcal" #kcal="ngModel" required
+                        [(ngModel)]="meal.kcal" />
+                </div>
+            </div>
+            <div class="err" *ngIf="kcal.invalid && kcal.dirty">
+                Niste izabrali kcal.
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-4">
+                    <label>Slika URL</label>
+                    <input class="form-control" type="text" name="slika" #slika="ngModel" required
+                        [(ngModel)]="meal.slika" />
+                </div>
+            </div>
+            <div class="err" *ngIf="slika.invalid && slika.dirty">
+                <div *ngIf="slika.errors">
+                    Slika obroka je obavezna i mora se poklapati sa paternom.
+                </div>
+            </div>
+            <br>
+            <div>
+                <label>Vrsta kuhinje: &nbsp; &nbsp;</label> &emsp;
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="cuisineName" id="inlineRadio1" value="domaca">
+                    <label class="form-check-label" for="inlineRadio1">Domaca</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="cuisineName" id="inlineRadio2"
+                        value="italijanska">
+                    <label class="form-check-label" for="inlineRadio2">Italijanska</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="cuisineName" id="inlineRadio3" value="kineska">
+                    <label class="form-check-label" for="inlineRadio3">Kineska</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="cuisineName" id="inlineRadio3" value="meksicka">
+                    <label class="form-check-label" for="inlineRadio3">Meksicka</label>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-4">
+                    <button style="margin-top: 2%;" type="submit" class="btn btn-primary">Dodaj</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</div>
